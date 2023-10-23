@@ -1,17 +1,17 @@
 $(document).ready(function () {
 
-    // get current date with dayjs
+    // gets current date with dayjs
     var today = dayjs().format('dddd, MMM D, YYYY h:mm A');
     $("#currentDay").html(today);
 
-    // save text to local storage
+    // saves text to local storage
     $(".saveBtn").on("click", function () {
         var text = $(this).siblings(".description").val();
         var time = $(this).parent().attr("id");
         localStorage.setItem(time, text);
     })
 
-    // retrives text from local storage
+    // retrives text from local storage, keeps it after refreshing page
     for (var i = 8; i <= 18; ++i) {
       var saved = localStorage.getItem("hour-" + i);
       var textArea = $("#hour-" + i + " .description");
@@ -20,7 +20,7 @@ $(document).ready(function () {
         textArea.val(saved)
       }
     }
-
+    // clears text from local storage
     $(".clearBtn").on("click", function () {
       $(this).siblings(".description").val("");
       var clearTime = $(this).parent().attr("id");
