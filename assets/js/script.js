@@ -19,7 +19,13 @@ $(document).ready(function () {
       if (saved !== null) {
         textArea.val(saved)
       }
-   }
+    }
+
+    $(".clearBtn").on("click", function () {
+      $(this).siblings(".description").val("");
+      var clearTime = $(this).parent().attr("id");
+      localStorage.removeItem(clearTime, "");
+    });
 
     // function to change colors of time blocks depending on past, present, future
     function colorTracker() {

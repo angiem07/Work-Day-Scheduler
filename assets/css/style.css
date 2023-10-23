@@ -10,6 +10,7 @@ textarea {
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
+  margin-right: 35px;
 }
 
 .description {
@@ -45,14 +46,17 @@ textarea {
   color: white;
 }
 
-.saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+.saveBtn, .clearBtn {
+  border: 1px solid black;
   background-color: #06aed5;
   color: white;
+  display: inline-block;
+  width: 10%;
 }
 
+.clearBtn{
+  border-left: none;
+}
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
