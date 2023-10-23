@@ -15,7 +15,7 @@ To use, add schedule description to the text box next to the appropiate time slo
 
 To clear, click the clear button (trash can icon).
 
-The schedule is color coden denpending on past, present and future events.\
+The schedule is color coded depending on past, present and future events.\
 past: grey\
 present: red\
 future: green
